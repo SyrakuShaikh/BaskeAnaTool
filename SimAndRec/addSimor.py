@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Gen
+import gen
 import os
 
 
@@ -15,7 +15,7 @@ def addSimor():
     ]
 
     for n, s, r in zip(name, simff, recff):
-        g = Gen.process(n, s, r)
+        g = gen.process(n, s, r)
         g.Make()
 
 

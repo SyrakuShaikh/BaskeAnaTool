@@ -6,7 +6,7 @@ export PYTHONPATH=${BaskDIR}:$PYTHONPATH
 
 # please use this python
 # this python version work well
-source /workfs/bes/maxx/local/python-2.7.14/setup.sh
+# source /workfs/bes/maxx/local/python-2.7.14/setup.sh
 
 source ${BaskDIR}/short/setup.sh
 cd ${BaskDIR}/SimAndRec 

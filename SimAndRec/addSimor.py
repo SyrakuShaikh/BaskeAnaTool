@@ -4,14 +4,16 @@ import os
 
 
 def addSimor():
-    name = ["Jpsi", "NewJpsi", "Psi2S", "4180"]
+    name = ["Jpsi", "NewJpsi", "Psi2S", "4180", "705Jpsi"]
     simff = [
         "template/simJpsi.txt", "template/simNewJpsi.txt",
-        "template/simPsi2S.txt", "template/sim4180.txt"
+        "template/simPsi2S.txt", "template/sim4180.txt",
+        "template/sim705Jpsi.txt"
     ]
     recff = [
         "template/recJpsi.txt", "template/recNewJpsi.txt",
-        "template/recPsi2S.txt", "template/rec4180.txt"
+        "template/recPsi2S.txt", "template/rec4180.txt",
+        "template/rec705Jpsi.txt"
     ]
 
     for n, s, r in zip(name, simff, recff):

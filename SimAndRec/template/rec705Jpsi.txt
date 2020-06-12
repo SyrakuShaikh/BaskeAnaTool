@@ -1,4 +1,4 @@
-//input ROOT MC data
+// input ROOT MC data
 #include "$ROOTIOROOT/share/jobOptions_ReadRoot.txt"
 #include "$OFFLINEEVENTLOOPMGRROOT/share/OfflineEventLoopMgr_Option.txt"
 
@@ -10,7 +10,6 @@
 #include "$ESTIMEALGROOT/share/job_EsTimeAlg.txt"
 
 // PAT+TSF+HOUGH method for MDC reconstruction
-#include "$MDCXRECOROOT/share/jobOptions_MdcPatTsfRec.txt"
 #include "$MDCHOUGHFINDERROOT/share/jobOptions_MdcPatTsfHoughRec.txt"
 
 #include "$KALFITALGROOT/share/job_kalfit_numf_data.txt"
@@ -25,7 +24,6 @@
 #include "$PRIMARYVERTEXALGROOT/share/jobOptions_kalman.txt"
 #include "$VEEVERTEXALGROOT/share/jobOptions_veeVertex.txt"
 
-
 #include "$HLTMAKERALGROOT/share/jobOptions_HltMakerAlg.txt"
 #include "$EVENTNAVIGATORROOT/share/EventNavigator.txt"
 
@@ -36,11 +34,11 @@
 #include "$CALIBSVCROOT/share/calibConfig_rec_mc.txt"
 
 
-//**************job options for random number************************
-BesRndmGenSvc.RndmSeed  = 21000 ;
+// ************ job options for random number ***********************
+BesRndmGenSvc.RndmSeed  = 21357;
 
 //Set output level threshold (2=DEBUG, 3=INFO, 4=WARNING, 5=ERROR, 6=FATAL )
-MessageSvc.OutputLevel = 5; 
+MessageSvc.OutputLevel = 5;
 
 //ROOT input data file
 EventCnvSvc.digiRootInputFile = {"/scratchfs/bes/zhuan/MCcard/init/init/../rtraw/09_PsiptoLambdaLambdabarPhi/PsiptoLambdaLambdabarPhi_000.rtraw"};
@@ -49,7 +47,6 @@ EventCnvSvc.digiRootInputFile = {"/scratchfs/bes/zhuan/MCcard/init/init/../rtraw
 EventCnvSvc.digiRootOutputFile = "/scratchfs/bes/maxx/Psi2S/LLPhi/12/dst/dst_0001.dst";
 
 //Number of events to be processed (default is 10)
-ApplicationMgr.EvtMax =100000;
-
+ApplicationMgr.EvtMax = 10000;
 
 

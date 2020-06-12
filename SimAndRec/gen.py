@@ -42,11 +42,11 @@ elif '-make' in util.getArv() :
         ss += 'import util\n'
         ss += 'svc = SimAndRec.process("%s","%s")\n' % (self._simff,
                                                         self._recff)
-        ss += '''if len(util.getArv()) ==0:
+        ss += '''if len(util.getArv()) == 0:
     svc.Make()
     svc.Sub()
     exit(0)
-elif '-make' in util.getArv() :
+elif '-make' in util.getArv():
     svc.Make()
     exit(0)
         '''

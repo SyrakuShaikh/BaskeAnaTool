@@ -40,8 +40,8 @@ elif '-make' in util.getArv() :
         f = open(ffName, 'w')
         ss = 'import SimAndRec\n'
         ss += 'import util\n'
-        ss += 'svc = SimAndRec.process("%s","%s")\n' % (self._simff,
-                                                        self._recff)
+        ss += 'svc = SimAndRec.process("%s", "%s")\n' % (self._simff,
+                                                         self._recff)
         if "705Jpsi" in self._simff:
             ss += "opt='''\"RealizationSvc\", \"RunIdList\", \"{-56788, 0, -59015}\", \"=\"'''\n"
             ss += 'svc.SetOpt(opt)\n'

@@ -4,7 +4,7 @@ import os
 
 
 def addSimor():
-    name = ["Jpsi", "NewJpsi", "Psi2S", "4180", "705Jpsi"]
+    name = ["Jpsi", "NewJpsi", "Psi2S", "4180", "705Jpsi", "Diy4180"]
     simff = [
         "template/simJpsi.txt", "template/simNewJpsi.txt",
         "template/simPsi2S.txt", "template/sim4180.txt",

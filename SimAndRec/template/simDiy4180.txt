@@ -4,7 +4,7 @@
 KKMC.CMSEnergy = 4.178;
 KKMC.BeamEnergySpread = 0.0013;
 KKMC.NumberOfEventPrinted = 1;
-KKMC.ParticleDecayThroughtEvtGen = true;
+KKMC.ParticleDecayThroughEvtGen = true;
 KKMC.RadiationCorrection = true;
 KKMC.GeneratePsi4260 = true;
 KKMC.ThresholdCut = 3.625;

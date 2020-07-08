@@ -43,11 +43,13 @@ elif '-make' in util.getArv() :
         ss += 'svc = SimAndRec.process("%s", "%s")\n' % (self._simff,
                                                          self._recff)
         if "705Jpsi" in self._simff:
-            ss += "opt='''\"RealizationSvc\", \"RunIdList\", \"{-56788, 0, -59015}\", \"=\"'''\n"
-            ss += 'svc.SetOpt(opt)\n'
-        elif "4180" in self._simff:
-            ss += "opt='''\"KKMC\", \"ThresholdCut\", \"3.625\", \"=\"'''\n"
-            ss += 'svc.SetOpt(opt)\n'
+            ss += 'opt = '
+            ss += '("RealizationSvc", "RunIdList", "{-56788, 0, -59015}", "=")'
+            ss += '\n'
+            ss += 'svc.SetOpt(*opt)\n'
+        elif "Diy4180" in self._simff:
+            ss += 'opt = ("KKMC", "ThresholdCut", "3.625", "=")\n'
+            ss += 'svc.SetOpt(*opt)\n'
 
         ss += '''if len(util.getArv()) == 0:
     svc.Make()

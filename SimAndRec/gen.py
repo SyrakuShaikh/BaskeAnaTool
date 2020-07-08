@@ -17,8 +17,8 @@ class process:
         ss = 'from SimAndRec import SimRecAna\n'
         ss += 'from SimAndRec import util\n'
         ss += "opt='''//test'''\n"
-        ss += 'svc = SimRecAna.process("%s","%s")\n'\
-                %(self._simff,self._recff)
+        ss += 'svc = SimRecAna.process("%s", "%s")\n'\
+            % (self._simff, self._recff)
         ss += 'svc.SetOpt(opt)\n'
         ss += '''if len(util.getArv()) ==0:
     svc.Make()
@@ -42,6 +42,13 @@ elif '-make' in util.getArv() :
         ss += 'import util\n'
         ss += 'svc = SimAndRec.process("%s","%s")\n' % (self._simff,
                                                         self._recff)
+        if "705Jpsi" in self._simff:
+            ss += "opt='''\"RealizationSvc\", \"RunIdList\", \"{-56788, 0, -59015}\", \"=\"'''\n"
+            ss += 'svc.SetOpt(opt)\n'
+        elif "4180" in self._simff:
+            ss += "opt='''\"KKMC\", \"ThresholdCut\", \"3.625\", \"=\"'''\n"
+            ss += 'svc.SetOpt(opt)\n'
+
         ss += '''if len(util.getArv()) == 0:
     svc.Make()
     svc.Sub()
@@ -59,7 +66,7 @@ elif '-make' in util.getArv():
             setup_bash += line
         setup_bash += 'alias Sim%s="python ${SIMANDRECDIR}/init%s.py"' % (
             self._name, self._name)
-        #print (setup_bash)
+        # print (setup_bash)
         f = open("setup.sh", 'w')
         f.write(setup_bash + '\n')
         f.close()
@@ -81,7 +88,7 @@ elif '-make' in util.getArv():
             setup_zsh += line
         setup_zsh += 'alias Sim%s="python ${SIMANDRECDIR}/init%s.py"' % (
             self._name, self._name)
-        #print (setup_bash)
+        # print (setup_bash)
         f = open("setup.zsh", 'w')
         f.write(setup_zsh + '\n')
         f.close()

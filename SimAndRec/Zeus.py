@@ -7,7 +7,7 @@ class zeus:
         self._type = []
 
     def _processLine(self, line):
-        #the line is a comment
+        # the line is a comment
         index = len(self._class) + 1
         ll = line.split()
         if len(ll) == 0:
@@ -20,7 +20,7 @@ class zeus:
             self._value.append(line)
             self._type.append("comment")
             return
-        #the line is include head
+        # the line is include head
         if ll[0].strip() == "#include":
             _class = "include" + str(index)
             self._class.append(_class.strip())
@@ -29,7 +29,7 @@ class zeus:
             self._value.append(line)
             self._type.append("include")
             return
-        #line is a class
+        # line is a class
         _class = line.split(".")[0].strip()
         _operator = ""
         if "=" in line:
@@ -75,7 +75,7 @@ class zeus:
             if _type == "class":
                 _line = self._class[i] + "." + self._member[i]
                 _line += " " + self._operator[i] + " " + self._value[i]
-                if not ";" in self._value[i]:
+                if ";" not in self._value[i]:
                     _line += ';'
                 _line += '\n'
                 f.write(_line)

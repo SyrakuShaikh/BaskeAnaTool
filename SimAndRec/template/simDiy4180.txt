@@ -8,6 +8,8 @@ KKMC.ParticleDecayThroughEvtGen = true;
 KKMC.RadiationCorrection = true;
 KKMC.GeneratePsi4260 = true;
 KKMC.ThresholdCut = 3.625;
+KKMC.TagISR = true;
+KKMC.TagFSR = true;
 
 // ****************** job options for generator (EvtGen) ***********************
 #include "$BESEVTGENROOT/share/BesEvtGen.txt"

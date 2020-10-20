@@ -13,8 +13,8 @@ class process():
         self._numOfJob = 1
         self._decayCard = "test.dec"
         self._totEvts = 10
-        T0 = 1572888530
-        self._seedBegin = int(time.time() - T0)
+        T0 = 1602876530
+        self._seedBegin = int((time.time() - T0)*100.0) % 2147483647
         self._datPth = "."
         self._simJobs = []
         self._recJobs = []

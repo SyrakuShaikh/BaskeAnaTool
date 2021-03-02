@@ -43,10 +43,15 @@ elif '-make' in util.getArv() :
         ss += 'svc = SimAndRec.process("%s", "%s")\n' % (self._simff,
                                                          self._recff)
         if "705Jpsi" in self._simff:
-            ss += 'opt = '
-            ss += '("RealizationSvc", "RunIdList", "{-56788, 0, -59015}", "=")'
-            ss += '\n'
-            ss += 'svc.SetOpt(*opt)\n'
+            ss += '## 2009 round02 {-9947, 0, -10878} 224.04+-1.26M\n'
+            ss += 'opt02 = ("RealizationSvc", "RunIdList", "{-9947, 0, -10878}", "=")\n'
+            ss += '## 2012 round05 {-27255, 0, -28236} 1088.50+-4.23M\n'
+            ss += 'opt05 = ("RealizationSvc", "RunIdList", "{-27255, 0, -28236}", "=")\n'
+            ss += '## 2017-18 round11 {-52940, 0, -54976, -55861, 0, -56546}\n'
+            ss += 'opt11 = ("RealizationSvc", "RunIdList", "{-52940, 0, -54976, -55861, 0, -56546}", "=")\n'
+            ss += '## 2018-19 round12 {-56788, 0, -59015}  2017-19 8774.01+-39.33M\n'
+            ss += 'opt12 = ("RealizationSvc", "RunIdList", "{-56788, 0, -59015}", "=")\n'
+            ss += 'svc.SetOpt(*opt02)\n'
         elif "Diy4180" in self._simff:
             ss += 'opt = ("KKMC", "ThresholdCut", "3.625", "=")\n'
             ss += 'svc.SetOpt(*opt)\n'

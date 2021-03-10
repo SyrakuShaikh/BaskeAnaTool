@@ -7,6 +7,7 @@
 
 #include "$CALIBSVCROOT/share/job-CalibData.txt"
 #include "$MAGNETICFIELDROOT/share/MagneticField.txt"
+MagneticFieldSvc.UniField = true;
 #include "$ESTIMEALGROOT/share/job_EsTimeAlg.txt"
 
 // PAT+TSF+HOUGH method for MDC reconstruction
